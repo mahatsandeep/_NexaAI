@@ -12,10 +12,10 @@ export function PageHero({
   return (
     <section className="relative overflow-hidden border-b border-border/60 py-20 sm:py-28">
       <div
-        className="pointer-events-none absolute inset-0 -z-10 opacity-40"
+        className="pointer-events-none absolute inset-0 -z-10"
         style={{
           background:
-            "radial-gradient(60% 50% at 50% 0%, oklch(0.65 0.22 265 / 0.35), transparent)",
+            "radial-gradient(60% 50% at 50% 0%, oklch(0.4 0.16 262 / 0.12), transparent)",
         }}
         aria-hidden="true"
       />

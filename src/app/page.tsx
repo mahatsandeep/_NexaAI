@@ -17,7 +17,7 @@ export default function HomePage() {
           className="pointer-events-none absolute inset-0 -z-10"
           style={{
             background:
-              "radial-gradient(55% 45% at 50% 0%, oklch(0.65 0.22 265 / 0.35), transparent), radial-gradient(40% 35% at 85% 20%, oklch(0.68 0.19 300 / 0.25), transparent)",
+              "radial-gradient(55% 45% at 50% 0%, oklch(0.4 0.16 262 / 0.14), transparent), radial-gradient(40% 35% at 85% 20%, oklch(0.55 0.14 262 / 0.1), transparent)",
           }}
           aria-hidden="true"
         />
