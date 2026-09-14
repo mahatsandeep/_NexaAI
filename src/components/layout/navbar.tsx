@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
+import { useSession, signOut } from "next-auth/react";
 import { Menu, Sparkles } from "lucide-react";
 
 import { navLinks, siteConfig } from "@/lib/site-config";
@@ -19,6 +20,7 @@ import { cn } from "@/lib/utils";
 export function Navbar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const { data: session } = useSession();
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-lg">
@@ -43,7 +45,23 @@ export function Navbar() {
           ))}
         </nav>
 
-        <div className="hidden md:block">
+        <div className="hidden items-center gap-3 md:flex">
+          {session?.user ? (
+            <>
+              {session.user.role === "ADMIN" ? (
+                <Button variant="ghost" nativeButton={false} render={<Link href="/admin" />}>
+                  Admin
+                </Button>
+              ) : null}
+              <Button variant="outline" onClick={() => signOut({ callbackUrl: "/" })}>
+                Sign Out
+              </Button>
+            </>
+          ) : (
+            <Button variant="outline" nativeButton={false} render={<Link href="/login" />}>
+              Sign In
+            </Button>
+          )}
           <Button nativeButton={false} render={<Link href="/book-consultation" />}>
             Book a Consultation
           </Button>
@@ -82,6 +100,36 @@ export function Navbar() {
               >
                 Book a Consultation
               </Button>
+              {session?.user ? (
+                <>
+                  {session.user.role === "ADMIN" ? (
+                    <Link
+                      href="/admin"
+                      onClick={() => setOpen(false)}
+                      className="text-base font-medium text-muted-foreground transition-colors hover:text-foreground"
+                    >
+                      Admin
+                    </Link>
+                  ) : null}
+                  <Button
+                    variant="outline"
+                    onClick={() => {
+                      setOpen(false);
+                      signOut({ callbackUrl: "/" });
+                    }}
+                  >
+                    Sign Out
+                  </Button>
+                </>
+              ) : (
+                <Button
+                  variant="outline"
+                  nativeButton={false}
+                  render={<Link href="/login" onClick={() => setOpen(false)} />}
+                >
+                  Sign In
+                </Button>
+              )}
             </nav>
           </SheetContent>
         </Sheet>
