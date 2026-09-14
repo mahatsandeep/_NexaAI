@@ -22,7 +22,7 @@ export default function ServicesPage() {
         description="From conversational AI agents to full workflow automation, we build the systems that let your team focus on higher-value work."
       />
 
-      <section className="py-20">
+      <section className="py-12">
         <Container>
           <div className="grid gap-8 md:grid-cols-2">
             {services.map((service) => {

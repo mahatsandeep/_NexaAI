@@ -81,7 +81,7 @@ export default function HomePage() {
         </Container>
       </section>
 
-      <section className="border-t border-border/60 bg-secondary/30 py-20">
+      <section className="border-t border-border/60 bg-secondary/30 py-12">
         <Container>
           <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
             <div>
@@ -117,7 +117,7 @@ export default function HomePage() {
         </Container>
       </section>
 
-      <section className="border-t border-border/60 py-20">
+      <section className="border-t border-border/60 py-12">
         <Container>
           <div className="mx-auto max-w-2xl text-center">
             <p className="text-sm font-medium uppercase tracking-widest text-primary">

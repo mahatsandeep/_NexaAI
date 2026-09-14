@@ -26,7 +26,7 @@ export default function BookConsultationPage() {
         description="Book a free 30-minute consultation and we'll map out exactly where automation can save you time and money."
       />
 
-      <section className="py-20">
+      <section className="py-12">
         <Container className="grid gap-12 lg:grid-cols-5">
           <div className="lg:col-span-3">
             <BookingForm />

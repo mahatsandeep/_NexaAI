@@ -10,7 +10,7 @@ export function PageHero({
   description?: string;
 }) {
   return (
-    <section className="relative overflow-hidden border-b border-border/60 py-20 sm:py-28">
+    <section className="relative overflow-hidden border-b border-border/60 py-12 sm:py-16">
       <div
         className="pointer-events-none absolute inset-0 -z-10"
         style={{

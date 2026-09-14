@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 
 export function CtaSection() {
   return (
-    <section className="border-t border-border/60 bg-secondary/40 py-20">
+    <section className="border-t border-border/60 bg-secondary/40 py-12">
       <Container className="flex flex-col items-center gap-6 text-center">
         <h2 className="font-heading text-3xl font-semibold tracking-tight sm:text-4xl">
           Ready to put AI to work for your business?

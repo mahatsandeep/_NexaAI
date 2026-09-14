@@ -20,7 +20,7 @@ export default function ContactPage() {
         description="Tell us what you're trying to automate and we'll follow up within one business day."
       />
 
-      <section className="py-20">
+      <section className="py-12">
         <Container className="grid gap-12 lg:grid-cols-5">
           <div className="lg:col-span-3">
             <ContactForm />

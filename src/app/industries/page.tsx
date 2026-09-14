@@ -21,7 +21,7 @@ export default function IndustriesPage() {
         description="We combine AI expertise with real operational knowledge of your sector so every automation fits into your existing workflows."
       />
 
-      <section className="py-20">
+      <section className="py-12">
         <Container>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {industries.map((industry) => (

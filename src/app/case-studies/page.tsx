@@ -23,7 +23,7 @@ export default function CaseStudiesPage() {
         description="A look at how our AI agents and automations have saved time, cut costs, and improved customer experience."
       />
 
-      <section className="py-20">
+      <section className="py-12">
         <Container>
           <div className="grid gap-6 lg:grid-cols-3">
             {caseStudies.map((study) => (

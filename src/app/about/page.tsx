@@ -42,7 +42,7 @@ export default function AboutPage() {
         description="M2-AI is a team of AI engineers and automation specialists focused on one thing: building AI agents and systems that create measurable impact for small and mid-sized businesses."
       />
 
-      <section className="py-20">
+      <section className="py-12">
         <Container>
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="font-heading text-3xl font-semibold tracking-tight sm:text-4xl">
