@@ -2,12 +2,19 @@ import Link from "next/link";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 
 import { Container } from "@/components/layout/container";
+import { AnimatedBackground } from "@/components/sections/animated-background";
 import { CtaSection } from "@/components/sections/cta-section";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { iconMap } from "@/lib/icon-map";
 import { caseStudies, industries, services } from "@/lib/site-config";
+
+const impactStats = [
+  { value: "24/7", label: "AI agents always on for your customers" },
+  { value: "70%", label: "Average reduction in manual work" },
+  { value: "2-4 wks", label: "Typical time to first working AI system" },
+];
 
 export default function HomePage() {
   return (
@@ -77,6 +84,24 @@ export default function HomePage() {
                 </Card>
               );
             })}
+          </div>
+        </Container>
+      </section>
+
+      <section className="relative overflow-hidden border-t border-border/60 py-16">
+        <AnimatedBackground />
+        <Container>
+          <div className="grid gap-8 text-center sm:grid-cols-3">
+            {impactStats.map((stat) => (
+              <div key={stat.label} className="rounded-2xl border border-border/60 bg-background/70 p-6 backdrop-blur-sm">
+                <p className="font-heading text-4xl font-semibold text-primary">
+                  {stat.value}
+                </p>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  {stat.label}
+                </p>
+              </div>
+            ))}
           </div>
         </Container>
       </section>
