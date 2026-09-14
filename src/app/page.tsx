@@ -12,7 +12,7 @@ import { caseStudies, industries, services } from "@/lib/site-config";
 export default function HomePage() {
   return (
     <>
-      <section className="relative overflow-hidden py-24 sm:py-32">
+      <section className="relative overflow-hidden pt-24 pb-6 sm:pt-32 sm:pb-8">
         <div
           className="pointer-events-none absolute inset-0 -z-10"
           style={{
@@ -45,7 +45,7 @@ export default function HomePage() {
         </Container>
       </section>
 
-      <section className="border-t border-border/60 py-20">
+      <section className="border-t border-border/60 pt-6 pb-20 sm:pt-8">
         <Container>
           <div className="mx-auto max-w-2xl text-center">
             <p className="text-sm font-medium uppercase tracking-widest text-primary">
