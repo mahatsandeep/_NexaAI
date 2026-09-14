@@ -21,13 +21,14 @@ export default function HomePage() {
     <>
       <section className="relative overflow-hidden pt-24 pb-6 sm:pt-32 sm:pb-8">
         <div
-          className="pointer-events-none absolute inset-0 -z-10"
+          className="pointer-events-none absolute inset-0 -z-20"
           style={{
             background:
               "radial-gradient(55% 45% at 50% 0%, oklch(0.4 0.16 262 / 0.14), transparent), radial-gradient(40% 35% at 85% 20%, oklch(0.55 0.14 262 / 0.1), transparent)",
           }}
           aria-hidden="true"
         />
+        <AnimatedBackground opacity="opacity-20" />
         <Container className="text-center">
           <Badge variant="secondary" className="mb-6">
             AI Automation &amp; AI Agents for Growing Businesses
