@@ -8,7 +8,7 @@ import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Get in touch with the NexaAI team about your AI automation project.",
+  description: "Get in touch with the M2-AI team about your AI automation project.",
 };
 
 export default function ContactPage() {

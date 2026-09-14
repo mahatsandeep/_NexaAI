@@ -21,11 +21,11 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   title: {
-    default: "NexaAI — AI that works for your business",
-    template: "%s | NexaAI",
+    default: "M2-AI — AI that works for your business",
+    template: "%s | M2-AI",
   },
   description:
-    "NexaAI designs and deploys intelligent AI solutions that automate repetitive work, improve customer experiences, and help businesses operate more efficiently.",
+    "M2-AI designs and deploys intelligent AI solutions that automate repetitive work, improve customer experiences, and help businesses operate more efficiently.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

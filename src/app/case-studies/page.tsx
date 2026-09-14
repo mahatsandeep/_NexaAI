@@ -11,7 +11,7 @@ import { CheckCircle2 } from "lucide-react";
 export const metadata: Metadata = {
   title: "Case Studies",
   description:
-    "Real results from AI automation and AI agent projects delivered by NexaAI.",
+    "Real results from AI automation and AI agent projects delivered by M2-AI.",
 };
 
 export default function CaseStudiesPage() {

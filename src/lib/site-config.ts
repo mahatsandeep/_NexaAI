@@ -1,9 +1,9 @@
 export const siteConfig = {
-  name: "NexaAI",
+  name: "M2-AI",
   tagline: "AI that works for your business.",
   description:
     "We design and deploy intelligent AI solutions that automate repetitive work, improve customer experiences, and help businesses operate more efficiently.",
-  email: "hello@nexaai.com",
+  email: "hello@m2-ai.com",
   phone: "+1 (555) 010-2024",
   address: "Remote-first — serving clients worldwide",
 };

@@ -9,7 +9,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "NexaAI is an AI automation agency helping small and mid-sized businesses deploy intelligent agents and automation.",
+    "M2-AI is an AI automation agency helping small and mid-sized businesses deploy intelligent agents and automation.",
 };
 
 const values = [
@@ -39,7 +39,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About Us"
         title="We help businesses put AI to work — not just talk about it"
-        description="NexaAI is a team of AI engineers and automation specialists focused on one thing: building AI agents and systems that create measurable impact for small and mid-sized businesses."
+        description="M2-AI is a team of AI engineers and automation specialists focused on one thing: building AI agents and systems that create measurable impact for small and mid-sized businesses."
       />
 
       <section className="py-20">
@@ -51,7 +51,7 @@ export default function AboutPage() {
             <p className="mt-4 text-muted-foreground">
               Too many businesses assume AI is only for large enterprises
               with big budgets and in-house engineering teams. We started
-              NexaAI to close that gap — designing and deploying practical AI
+              M2-AI to close that gap — designing and deploying practical AI
               agents and automations that any growing business can adopt,
               backed by ongoing support to keep them running smoothly.
             </p>

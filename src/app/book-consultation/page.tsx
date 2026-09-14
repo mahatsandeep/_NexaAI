@@ -8,7 +8,7 @@ import { BookingForm } from "@/components/forms/booking-form";
 export const metadata: Metadata = {
   title: "Book a Consultation",
   description:
-    "Book a free consultation to see how NexaAI can automate your business with AI.",
+    "Book a free consultation to see how M2-AI can automate your business with AI.",
 };
 
 const highlights = [
