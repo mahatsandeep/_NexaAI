@@ -6,7 +6,7 @@ First, run the development server:
 
 ```bash
 npm run dev
-# or
+ #or
 yarn dev
 # or
 pnpm dev
@@ -15,6 +15,13 @@ bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Password reset email
+
+Copy `.env.example` to `.env` and set `NEXT_PUBLIC_APP_URL`, `RESEND_API_KEY`, and
+`RESEND_FROM` to enable delivery through Resend. In development, the forgot-password
+page displays the generated reset URL after a successful request, so no email service
+is required for local testing.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 

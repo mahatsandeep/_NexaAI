@@ -17,9 +17,13 @@ export function BookingForm() {
     event.preventDefault();
     setStatus("submitting");
 
-    // TODO(Stage 2): wire this up to POST /api/booking once the backend lands.
-    await new Promise((resolve) => setTimeout(resolve, 600));
-    setStatus("success");
+    const formData = new FormData(event.currentTarget);
+    const response = await fetch("/api/booking", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(Object.fromEntries(formData)),
+    });
+    setStatus(response.ok ? "success" : "error");
   }
 
   if (status === "success") {
@@ -67,13 +71,19 @@ export function BookingForm() {
       </div>
 
       <div className="space-y-2">
-        <Label htmlFor="booking-notes">What would you like to discuss?</Label>
+        <Label htmlFor="booking-message">What would you like to discuss?</Label>
         <Textarea
-          id="booking-notes"
-          name="notes"
+          id="booking-message"
+          name="message"
           placeholder="Share a bit about your goals so we can prepare for the call..."
           rows={4}
+          required
         />
+      </div>
+
+      <div className="space-y-2">
+        <Label htmlFor="booking-notes">Additional notes</Label>
+        <Textarea id="booking-notes" name="notes" placeholder="Anything else we should know?" rows={3} />
       </div>
 
       <Button type="submit" size="lg" className="w-full sm:w-auto" disabled={status === "submitting"}>
@@ -89,6 +99,9 @@ export function BookingForm() {
           </>
         )}
       </Button>
+      {status === "error" ? (
+        <p className="text-sm text-destructive">We couldn&apos;t submit your request. Please try again.</p>
+      ) : null}
     </form>
   );
 }

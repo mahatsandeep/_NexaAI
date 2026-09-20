@@ -49,8 +49,8 @@ export function Navbar() {
           {session?.user ? (
             <>
               {session.user.role === "ADMIN" ? (
-                <Button variant="ghost" nativeButton={false} render={<Link href="/admin" />}>
-                  Admin
+                <Button variant="ghost" nativeButton={false} render={<Link href="/dashboard" />}>
+                  Dashboard
                 </Button>
               ) : null}
               <Button variant="outline" onClick={() => signOut({ callbackUrl: "/" })}>
@@ -104,11 +104,11 @@ export function Navbar() {
                 <>
                   {session.user.role === "ADMIN" ? (
                     <Link
-                      href="/admin"
+                      href="/dashboard"
                       onClick={() => setOpen(false)}
                       className="text-base font-medium text-muted-foreground transition-colors hover:text-foreground"
                     >
-                      Admin
+                      Dashboard
                     </Link>
                   ) : null}
                   <Button

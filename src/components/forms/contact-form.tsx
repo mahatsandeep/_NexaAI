@@ -17,9 +17,13 @@ export function ContactForm() {
     event.preventDefault();
     setStatus("submitting");
 
-    // TODO(Stage 2): wire this up to POST /api/contact once the backend lands.
-    await new Promise((resolve) => setTimeout(resolve, 600));
-    setStatus("success");
+    const formData = new FormData(event.currentTarget);
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(Object.fromEntries(formData)),
+    });
+    setStatus(response.ok ? "success" : "error");
   }
 
   if (status === "success") {
@@ -82,6 +86,9 @@ export function ContactForm() {
           </>
         )}
       </Button>
+      {status === "error" ? (
+        <p className="text-sm text-destructive">We couldn&apos;t send your message. Please try again.</p>
+      ) : null}
     </form>
   );
 }
